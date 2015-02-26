@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.paulmanning.sunshine.app"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+//      Next line for espresso
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    added section and exclude license.txt when added AndroidJUnitRunner with espresso
+//    packagingOptions {
+//        exclude 'LICENSE.txt'
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v4:21.0.3'
+
+//  Next line for junit 4 testing
+    testCompile 'junit:junit:4.12'
+//    testCompile "org.mockito:mockito-core:1.9.5"
+
+//    testCompile "junit:junit:4.5+"
+
+//  Next two lines for espresso
+//    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+//    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+//  may want the next line if use stuff from expresso-contrib
+//    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
+}
