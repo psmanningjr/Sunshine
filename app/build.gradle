@@ -23,9 +23,9 @@ android {
     }
 
 //    added section and exclude license.txt when added AndroidJUnitRunner with espresso
-//    packagingOptions {
-//        exclude 'LICENSE.txt'
-//    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
 }
 
 dependencies {
@@ -40,8 +40,8 @@ dependencies {
 //    testCompile "junit:junit:4.5+"
 
 //  Next two lines for espresso
-//    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
-//    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
 //  may want the next line if use stuff from expresso-contrib
-//    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
 }
